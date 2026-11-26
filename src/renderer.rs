@@ -573,7 +573,7 @@ impl Renderer {
         AutoCommandBufferBuilder::secondary(
             self.allocators.command_buffer.clone(),
             self.gfx_queue.queue_family_index(),
-            CommandBufferUsage::MultipleSubmit,
+            CommandBufferUsage::SimultaneousUse,
             CommandBufferInheritanceInfo {
                 render_pass: Some(self.subpass.clone().into()),
                 ..Default::default()
